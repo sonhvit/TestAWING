@@ -55,26 +55,25 @@ function sliceText(name: string) {
   return name;
 }
 
-const campaign: Campaign = {
-  information: {
-    name: "",
-    describe: "",
-  },
-  subCampaigns: [
-    {
-      name: "Chiến dịch con 1",
-      status: true,
-      ads: [
-        {
-          name: "Quảng cáo 1",
-          quantity: 0,
-        },
-      ],
-    },
-  ],
-};
-
 function App() {
+  const campaign: Campaign = {
+    information: {
+      name: "",
+      describe: "",
+    },
+    subCampaigns: [
+      {
+        name: "Chiến dịch con 1",
+        status: true,
+        ads: [
+          {
+            name: "Quảng cáo 1",
+            quantity: 0,
+          },
+        ],
+      },
+    ],
+  };
   const [value, setValue] = useState("1");
   const [dataCampaign, setDataCampaign] = useState<Campaign>(campaign);
   const [validateOnSubmit, setValidateOnSubmit] = useState<boolean>(false);
